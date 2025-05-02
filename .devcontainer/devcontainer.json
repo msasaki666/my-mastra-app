@@ -1,0 +1,11 @@
+{
+	"name": "Existing Docker Compose (Extend)",
+	"dockerComposeFile": [
+		"../compose.yaml"
+	],
+	"service": "app",
+  "workspaceFolder": "/${containerWorkspaceFolder}",
+	"shutdownAction": "stopCompose"
+	// Configure tool-specific properties.
+	// "customizations": {},
+}

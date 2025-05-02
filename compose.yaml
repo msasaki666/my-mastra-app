@@ -1,0 +1,27 @@
+volumes:
+  db-data:
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "4111:4111"
+    env_file:
+      - .env.development
+    volumes:
+      - .:/app:cached
+    command: tail -f /dev/null
+    depends_on:
+      - vector-db
+  vector-db:
+    image: pgvector/pgvector:pg17
+    environment:
+      - POSTGRES_USER=username
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=app_database
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    expose:
+      - 5432
