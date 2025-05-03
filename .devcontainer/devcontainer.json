@@ -5,7 +5,17 @@
 	],
 	"service": "app",
   "workspaceFolder": "/app",
-	"shutdownAction": "stopCompose"
+	"shutdownAction": "stopCompose",
 	// Configure tool-specific properties.
-	// "customizations": {},
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"editor.defaultFormatter": "biomejs.biome",
+				"editor.formatOnSave": true
+			},
+			"extensions": [
+				"biomejs.biome"
+			]
+		}
+	}
 }
