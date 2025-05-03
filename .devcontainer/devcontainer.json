@@ -4,7 +4,7 @@
 		"../compose.yaml"
 	],
 	"service": "app",
-  "workspaceFolder": "/${containerWorkspaceFolder}",
+  "workspaceFolder": "/app",
 	"shutdownAction": "stopCompose"
 	// Configure tool-specific properties.
 	// "customizations": {},
